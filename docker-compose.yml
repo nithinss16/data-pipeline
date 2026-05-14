@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  pipeline:
+    build: .
+    container_name: data-pipeline
+    volumes:
+      - ./output:/app/output
+    environment:
+      - PYTHONUNBUFFERED=1
